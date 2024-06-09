@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineKo</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Staatliches&display=swap"
+        rel="stylesheet" />
+    <link rel="preload" href="../static/css/normalize.css" as="style" />
+    <link href="../static/css/normalize.css" rel="stylesheet" />
+    <link rel="preload" href="../static/css/style.css" as="style" />
+    <link rel="icon" href="../static/img/logo2.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../static/img/logo2.png" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="nav-bg">
+        <a href="http://127.0.0.1:5500/templates/index.html">CINEKO</a>
+        <a href="http://127.0.0.1:5500/templates/cartelera.html">CARTELERA</a>
+        <a class="selMenu" href="http://127.0.0.1:5500/templates/comidas.html">CONFITERIA</a>
+        <a href="http://127.0.0.1:5500/templates/membresias.html">MEMBRESIAS</a>
+        <a href="http://127.0.0.1:5500/templates/promociones.html">PROMOCIONES</a>
+        <a href="http://127.0.0.1:5500/templates/ingresar.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-filled" width="20"
+                height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#c2b284" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" stroke-width="0"
+                    fill="currentColor" />
+                <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z"
+                    stroke-width="0" fill="currentColor" />
+            </svg>
+            INGRESAR
+        </a>
+    </nav>
+
+    <main>
+        <div class="imageConfiteria">
+            <div class="combo"
+                data-info='{"nombre": "Combo 1", "descripcion": ["2 Palomitas grandes", "2 Gaseosas grandes", "2 Perros grandes", "2 Chocolatinas"], "precio": "$75.000", "imagen": "/static/img/Confiteria/combo1.png"}'
+                onclick="mostrarFicha(this)">
+                <p class="titulo">Combo 1</p>
+                <img src="/static/img/Confiteria/combo1.png" alt="Combo 1">
+                <p class="infCombo">Mas Informacion</p>
+                <p class="flecha">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-down-filled"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg>
+                </p>
+            </div>
+
+            <div class="combo"
+                data-info='{"nombre": "Combo 2", "descripcion": ["2 Palomitas grandes", "2 Gaseosas grandes", "2 Perros sencillos", "1 Chocolatina"], "precio": "$68.000", "imagen": "/static/img/Confiteria/combo2.png"}'
+                onclick="mostrarFicha(this)">
+                <p class="titulo">Combo 2</p>
+                <img src="/static/img/Confiteria/combo2.png" alt="Combo 2">
+                <p class="infCombo">Mas Informacion</p>
+                <p class="flecha"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-badge-down-filled" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg></p>
+            </div>
+            <div class="combo"
+                data-info='{"nombre": "Combo 3", "descripcion": ["1 Palomita grande", "1 Gaseosa grande", "1 Perro sencillo", "1 Chocolatina"], "precio": "$40.000", "imagen": "/static/img/Confiteria/combo3.png"}'
+                onclick="mostrarFicha(this)">
+                <p class="titulo">Combo 3</p>
+                <img src="/static/img/Confiteria/combo3.png" alt="Combo 3">
+                <p class="infCombo">Mas Informacion</p>
+                <p class="flecha"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-badge-down-filled" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg></p>
+            </div>
+            <div class="combo"
+                data-info='{"nombre": "Combo 4", "descripcion": ["1 Palomita grande", "1 Gaseosa grande", "1 Paquete de Detodito", "1 Perro sencillo"], "precio": "$45.000", "imagen": "/static/img/Confiteria/combo4.png"}'
+                onclick="mostrarFicha(this)">
+                <p class="titulo">Combo 4</p>
+                <img src="/static/img/Confiteria/combo4.png" alt="Combo 4">
+                <p class="infCombo">Mas Informacion</p>
+                <p class="flecha"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-badge-down-filled" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg></p>
+            </div>
+            <div class="combo"
+                data-info='{"nombre": "Combo 5", "descripcion": ["1 Palomita grande", "2 Gaseosas grandes", "1 Perro", "1 Hamburguesa grande", "1 Paquete de Detodito"], "precio": "$58.000", "imagen": "/static/img/Confiteria/combo5.png"}'
+                onclick="mostrarFicha(this)">
+                <p class="titulo">Combo 5</p>
+                <img src="/static/img/Confiteria/combo5.png" alt="Combo 5">
+                <p class="infCombo">Mas Informacion</p>
+                <p class="flecha"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-badge-down-filled" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg></p>
+            </div>
+            <div class="combo"
+                data-info='{"nombre": "Combo 6", "descripcion": ["1 Palomita grande", "1 Gaseosa grande", "1 Hamburguesa grande"], "precio": "$40.000", "imagen": "/static/img/Confiteria/combo6.png"}'
+                onclick="mostrarFicha(this)">
+                <p class="titulo">Combo 6</p>
+                <img src="/static/img/Confiteria/combo6.png" alt="Combo 6">
+                <p class="infCombo">Mas Informacion</p>
+                <p class="flecha"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-badge-down-filled" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg></p>
+            </div>
+            <div class="combo"
+                data-info='{"nombre": "Combo 7", "descripcion": ["1 Palomita mediana", "1 Gaseosa mediana", "1 Paquete de gomitas"], "precio": "$25.000", "imagen": "/static/img/Confiteria/combo7.png"}'
+                onclick="mostrarFicha(this)">
+                <p class="titulo">Combo 7</p>
+                <img src="/static/img/Confiteria/combo7.png" alt="Combo 7">
+                <p class="infCombo">Mas Informacion</p>
+                <p class="flecha"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-badge-down-filled" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg></p>
+            </div>
+            <div class="combo"
+                data-info='{"nombre": "Palomitas", "descripcion": ["Pequeñas: $6.000", "Medianas: $12.000", "Grandes: $15.000", "Grandes Combinadas: $17.000"], "precio": "", "imagen": "/static/img/Confiteria/image.png"}'
+                onclick="mostrarFicha(this)">
+                <p class="titulo">Palomitas</p>
+                <img src="/static/img/Confiteria/image.png" alt="Palomitas">
+                <p class="infCombo">Mas Informacion</p>
+                <p class="flecha"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-badge-down-filled" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modalFicha" class="modal2">
+        <div class="modal2-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2 id="modalNombre"></h2>
+            <img id="modalImagen" src="" alt="Imagen del producto" style="width: 350px; height: auto;">
+            <p id="modalDescripcion"></p>
+            <a href="#" onclick="comprarProducto()">
+                <div class="botonComprar">
+                    <p class="precio" id="modalPrecio"></p>
+                    <p class="bComprar">Comprar <svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-shopping-cart-plus" width="12" height="12"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#554b27" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                            <path d="M12.5 17h-6.5v-14h-2" />
+                            <path d="M6 5l14 1l-.86 6.017m-2.64 .983h-10.5" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                        </svg></p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Copyright © 2024 CineKo Real. All Rights Reserved</p>
+    </footer>
+
+    <script src="/static/js/carrito.js"></script>
+    <script src="/static/js/confiteria.js"></script>
+</body>
+
+</html>

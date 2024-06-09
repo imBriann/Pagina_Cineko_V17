@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineKo</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krub:wght@200;300;400;500;600;700&family=Staatliches&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="icon" href="/static/img/logo2.png" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="nav-bg">
+        <a href="/templates/index.html">CINEKO</a>
+        <a href="/templates/cartelera.html">CARTELERA</a>
+        <a href="/templates/comidas.html">CONFITERIA</a>
+        <a href="/templates/membresias.html">MEMBRESIAS</a>
+        <a href="/templates/promociones.html">PROMOCIONES</a>
+        <a href="/templates/ingresar.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-filled" width="20"
+                height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#c2b284" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" stroke-width="0"
+                    fill="currentColor" />
+                <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z"
+                    stroke-width="0" fill="currentColor" />
+            </svg>
+            INGRESAR
+        </a>
+    </nav>
+
+    <div class="poster-pelicula">
+        <div class="conPelicula">
+            <img id="posterPelicula" src="" alt="Póster de la película" />
+            <div class="descPelicula2">
+                <h1>
+                    <div id="nombrePelicula"></div>
+                </h1>
+                <div class="formulario2">
+                    <legend>- - Personaliza Tu Aventura Cinematográfica - -</legend>
+                    <div class="ordenCampos">
+                        <div class="campos2">
+                            <div class="direccionAsientos">
+                                <div class="seleccionAsientos">
+                                    <div class="contenidoAsientos">
+                                        <label for="asientos">Elige tu Asiento Ideal</label>
+                                        <div class="screen">Pantalla</div>
+                                        <div class="seating-chart">
+                                            <!-- Aquí puedes generar los asientos -->
+                                            <div class="seat">A1</div>
+                                            <div class="seat">A2</div>
+                                            <div class="seat">A3</div>
+                                            <div class="seat">A4</div>
+                                            <div class="seat">A5</div>
+                                            <div class="seat">A6</div>
+                                            <div class="seat">A7</div>
+                                            <div class="seat">A8</div>
+                                            <div class="seat">A9</div>
+                                            <div class="seat">A10</div>
+                
+                                            <!-- Fila B -->
+                                            <div class="seat">B1</div>
+                                            <div class="seat">B2</div>
+                                            <div class="seat">B3</div>
+                                            <div class="seat">B4</div>
+                                            <div class="seat">B5</div>
+                                            <div class="seat">B6</div>
+                                            <div class="seat">B7</div>
+                                            <div class="seat">B8</div>
+                                            <div class="seat">B9</div>
+                                            <div class="seat">B10</div>
+                
+                                            <!-- Fila C -->
+                                            <div class="seat">C1</div>
+                                            <div class="seat">C2</div>
+                                            <div class="seat">C3</div>
+                                            <div class="seat">C4</div>
+                                            <div class="seat">C5</div>
+                                            <div class="seat">C6</div>
+                                            <div class="seat">C7</div>
+                                            <div class="seat">C8</div>
+                                            <div class="seat">C9</div>
+                                            <div class="seat">C10</div>
+                
+                                            <!-- Fila D -->
+                                            <div class="seat">D1</div>
+                                            <div class="seat">D2</div>
+                                            <div class="seat">D3</div>
+                                            <div class="seat">D4</div>
+                                            <div class="seat">D5</div>
+                                            <div class="seat">D6</div>
+                                            <div class="seat">D7</div>
+                                            <div class="seat">D8</div>
+                                            <div class="seat">D9</div>
+                                            <div class="seat">D10</div>
+                                            <!-- Fila E -->
+                                            <div class="seat">E1</div>
+                                            <div class="seat">E2</div>
+                                            <div class="seat">E3</div>
+                                            <div class="seat">E4</div>
+                                            <div class="seat">E5</div>
+                                            <div class="seat">E6</div>
+                                            <div class="seat">E7</div>
+                                            <div class="seat">E8</div>
+                                            <div class="seat">E9</div>
+                                            <div class="seat">E10</div>
+                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form id="seleccionPelicula">
+                                <div class="seleccion-formato">
+                                    <label for="tipo">● Formato de Película:</label>
+                                    <select id="tipo" name="tipo">
+                                        <!-- Opciones de formato aquí -->
+                                    </select>
+                                </div>
+
+                                <div class="seleccion-dia">
+                                    <label for="dia">● Día de la Función:</label>
+                                    <select id="calendario" name="calendario"
+                                        onchange="actualizarHorariosSeleccionados()">
+                                        <!-- Opciones de día aquí -->
+                                    </select>
+                                </div>
+
+                                <div class="seleccion-horario">
+                                    <label for="horario">● Horario de la Función:</label>
+                                    <select id="horario" name="horario">
+                                        <!-- Opciones de horario aquí -->
+                                    </select>
+                                </div>
+                                
+
+                                <div class="Soporte">
+                                    <p>Precio 2D: $10.000</p>
+                                    <p>Precio 3D: $15.000</p>
+                                    <a class="line1" href="https://wa.me/573124469118" target="_blank">¿Necesitas Ayuda?</a>
+                                    <a href="https://wa.me/573124469118" target="_blank">¡Chatea con Nosotros!</a>
+
+                                </div>
+                                <div class="botonPosicion">
+                                    <input class="boton2" type="submit" value="Finalizar Compra" />
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/carrito.js"></script>
+    <script src="/static/js/procesoCompra.js"></script>
+</body>
+
+</html>

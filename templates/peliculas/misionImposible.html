@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+    <title>CineKo</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Staatliches&display=swap"
+        rel="stylesheet" />
+    <link rel="preload" href="/static/css/normalize.css" as="style" />
+    <link href="/static/css/normalize.css" rel="stylesheet" />
+    <link rel="preload" href="/static/css/style.css" as="style" />
+    <link rel="icon" href="/static/img/logo2.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/img/logo2.png" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="nav-bg">
+        <a href="/templates/index.html">CINEKO</a>
+        <a href="/templates/cartelera.html">CARTELERA</a>
+        <a href="/templates/comidas.html">CONFITERIA</a>
+        <a href="/templates/membresias.html">MEMBRESIAS</a>
+        <a href="/templates/promociones.html">PROMOCIONES</a>
+        <a href="/templates/ingresar.html"><svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-user-filled" width="20" height="20" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="#c2b284" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" stroke-width="0"
+                    fill="currentColor" />
+                <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z"
+                    stroke-width="0" fill="currentColor" />
+            </svg>
+            INGRESAR</a>
+    </nav>
+</body>
+
+<div class="poster-pelicula">
+    <div class="conPelicula">
+        <img src="/static/img/Cartelera/Poster_MisonImposible.jpg" alt="Dune">
+        <div class="descPelicula">
+            <h1>Mision Imposible</h1>
+            <p>Misión Imposible es una película de acción y espionaje de 1996, dirigida por Brian De Palma. La trama
+                sigue a Ethan Hunt, un agente de la Fuerza de Misiones Imposibles (IMF), quien es acusado falsamente de
+                deslealtad y debe descubrir y exponer al verdadero espía sin la ayuda de su organización. Basada en la
+                exitosa serie de televisión, la película comienza con Jim Phelps, líder del equipo, enviado a Praga para
+                prevenir el robo de material clasificado. Desafortunadamente, algo sale terriblemente mal y la misión
+                fracasa, dejando a Ethan Hunt como el aparente único superviviente. Después de informar de la misión
+                fallida, Kittridge, el jefe de la agencia, sospecha que Ethan es el culpable de la misión fallida.
+                Ahora, Ethan utiliza métodos poco ortodoxos para intentar descubrir quién lo tendió una trampa y limpiar
+                su nombre.</p>
+
+            <h2>Reparto y Personajes</h2>
+            <p>La película cuenta con un elenco estelar que incluye a Tom Cruise como Ethan Hunt, un agente de la IMF
+                que es acusado falsamente de deslealtad. Jon Voight interpreta a Jim Phelps, el líder del equipo de la
+                IMF. Emmanuelle Béart interpreta a Claire, la esposa de Phelps y miembro del equipo de Phelps. Henry
+                Czerny interpreta a Kittridge, el jefe de la agencia que sospecha de Ethan. Vanessa Redgrave interpreta
+                a Max, un traficante de armas que ayuda a Ethan. Jean Reno y Ving Rhames interpretan a Franz Krieger y
+                Luther Stickell, respectivamente, dos agentes de la IMF repudiados que se unen a Ethan en su misión.</p>
+            <div class="trailerContainer">
+                <button class="boTrailer"
+                    onclick="openTrailer('https://www.youtube.com/embed/mlX7tD_0Fj8?autoplay=1')">Ver Trailer</button>
+
+            </div>
+
+            <!-- Ventana emergente del video -->
+            <div class="modal" id="videoModal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <iframe id="videoPlayer" width="800" height="450" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bContinuar">
+            <a class="boContinuar" href="../Proceso-Compra.html?id=120828">Continuar</a>
+        </div>
+    </div>
+</div>
+<script src="/static/js/trailer.js"></script>
+</body>
+<footer class="footer">
+    <p>Copyright © 2024 CineKo Real. All Rights Reserved</p>
+</footer>

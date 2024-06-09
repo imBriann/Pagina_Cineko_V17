@@ -1,0 +1,1039 @@
+/* CSS del Sitio Web Cineko */
+
+/* Colores Principales */
+:root {
+    --AzulOscuro: #0f1c25;
+    --Blanco: #ffffff;
+    --AzulMarino: #385d6b;
+    --AzulTransparente: #345b6976;
+    --AzulBarra: #313b44;
+    --Dorado: #c2b284;
+    --Negro: #000000;
+    --gris: #ccc;
+    --amarillo: #ff0;
+    --blanco: #fff;
+}
+
+/* Definicion de algunos Titulos y Tamaños de la pagina */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--AzulOscuro);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+
+/*Quitamos la decoracion de todos los enlaces del sitio web*/
+a {
+    text-decoration: none;
+}
+
+/* Barra de Navegacion */
+
+/* Distribucion de la barra y colores*/
+.nav-bg {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--AzulBarra);
+    padding: 0.2rem;
+    border-bottom: 2px solid #c2b284;
+}
+
+/* Estilos para los titulos(Enlaces) */
+.nav-bg a {
+    color: var(--Dorado);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+/* Contorno(Negrilla) a los Enlaces menos el ultimo*/
+.nav-bg a:not(:last-child) {
+    text-shadow: -1px 0 #7c7045, 0 1px #7c7045, 1px 0 #7c7045, 0 -1px #7c7045;
+}
+
+/*Fuente para los enlaces menos el primero*/
+.nav-bg a:not(:first-child) {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Cuando el usuario pasa con el cursor por el encima del enlace(titulos) se le genera un cuadrado de fondo*/
+.nav-bg a:hover {
+    background-color: #0f1c256d;
+    margin-top: 1px;
+    border-radius: 10px;
+}
+
+.selMenu {
+    background-color: #0f1c25;
+    border-radius: 10px;
+}
+
+/*Hacer mas grande el nombre del Cine (Primer Enlace)*/
+.nav-bg a:first-child {
+    font-size: 2em;
+}
+
+/*Modificar el estilo del ultimo enlace(titulo)*/
+.nav-bg a:last-child {
+    border: 2px solid #535953;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #535953;
+    color: #a8a388;
+    margin: 10px 0;
+}
+
+/*Cuando el usuario pasa con el cursor por el encima del enlace(titulos) se le genera un cuadrado de fondo solo para el ultimo*/
+.nav-bg a:last-child:hover {
+    background-color: #0f1c256d;
+}
+
+/*Estilo para el fondo(texto) de pagina*/
+.footer {
+    color: #ffffff2a;
+    text-align: center;
+}
+
+
+/*Pagina Principal (Index)*/
+/*Fondo Principal*/
+.imag-fondo {
+    position: relative;
+    background-image: url(../img/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+/*Ajustamos el tamaño de la imagen para que se distribuya en el 100% de la pagina*/
+.contenedor-imag {
+    height: 100%;
+    width: 100%;
+}
+
+/*Apartado de la Redes Sociales*/
+.contenido-imag {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 5px;
+    right: 5px;
+    padding: 2px;
+    background-color: var(--AzulTransparente);
+    border-radius: 10px;
+}
+
+/*Titulo h3 Redes Sociales*/
+.contenido-imag h3 {
+    margin-bottom: 5px;
+    color: var(--Blanco);
+    font-size: 1.5rem;
+}
+
+/*Apartado de las peliculas destacadas*/
+/* Distribucion de las peliculas al anclo de la pagina*/
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Definimos el tamaño de las imagenes para que tengan el mismo tamaño*/
+.image-container img {
+    width: 250px;
+    height: 375px;
+    margin: 20px;
+    object-fit: cover;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+/*Al pasar el cursor por encima se engranda el poster*/
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/*Estilos de los titulos de las peliculas*/
+.titulo-pelicula {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.549);
+    margin-top: 5px;
+}
+
+/*Cartelera*/
+/*Distribuimos las peliculas para que queden en filas y centradas ocupando el espacio disponible de la pagina*/
+.image-cartelera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Ajustamos el Tamaño de los posters*/
+.image-cartelera img {
+    width: 250px;
+    height: 375px;
+    margin: 20px;
+    object-fit: cover;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+/*Pequeña animacion a la hora de pasar el cursor por encima*/
+.image-cartelera img:hover {
+    transform: scale(1.1);
+}
+
+/*Sesion peliculas*/
+/*Distribucion de los poster a medida de la pagina*/
+.poster-pelicula {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+/* Establece un contenedor flexible para la imagen y el texto */
+.conPelicula {
+    display: flex;
+}
+
+/*Ajuste de las imagenes*/
+.conPelicula img {
+    width: 400px;
+    height: 625px;
+    margin-right: 30px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+/*Distribucion de contenido de la pelicula*/
+.descPelicula {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Estilos para el titulo principal de las peliculas*/
+.conPelicula h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.549);
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
+
+/*Estilos para el titulo secundario*/
+.conPelicula h2 {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.549);
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
+
+/*Estilos para los parrafos o contenido de las peliculas*/
+.conPelicula p {
+    font-size: 2rem;
+    color: rgba(206, 204, 204, 0.549);
+    text-align: justify;
+}
+
+/*Posicion del diseño del boton*/
+.bContinuar {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: auto;
+    padding: 0;
+}
+
+/*Creacion del diseño del boton*/
+.boContinuar {
+    border: none;
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: var(--AzulTransparente);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*Pagina de Confiteria*/
+/*Distribuir los combos en filas*/
+.imageConfiteria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/*Cuadrado de fondo y control del contenido*/
+.imageConfiteria .combo {
+    position: relative;
+    border: 2px solid #000;
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    background-color: #c2b38479;
+}
+
+/*Ajustar el tamaño de la imagen del combo*/
+.imageConfiteria img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/*Estilos para la informacion*/
+.infCombo {
+    color: #9e9f9dd7;
+    margin-top: 0rem;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+}
+
+/*Estilo para el icono de la flecha*/
+.flecha {
+    color: #9e9f9dd7;
+    margin-top: -20px;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/*Estilos para el nombre del combo*/
+.titulo {
+    text-transform: uppercase;
+    color: #f0e1aa;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+
+.combo {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.combo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del modal */
+/* Estilos para la ventana emergente */
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* fondo semitransparente */
+    overflow: auto;
+}
+
+.modal2-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefec8;
+    padding: 5px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    animation-name: animatetop;
+    animation-duration: 1s;
+}
+
+.modal2-content h2 {
+    text-align: center;
+}
+
+.botonComprar {
+    background-color: #485d2e76;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-left: 12rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 12rem;
+}
+
+.bComprar {
+    color: #554b27bb;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: -1.5rem;
+}
+
+.precio {
+    color: #554b27;
+    font-weight: bold;
+}
+
+#modalDescripcion ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#modalDescripcion li {
+    margin-bottom: 5px;
+}
+
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 370px;
+        opacity: 1;
+    }
+}
+
+
+/* Pagina de Membresias */
+
+/*Distribucion de secciones*/
+.imgMembresia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/*Distribucion de contenido dentro de la seccion*/
+.membresia {
+    position: relative;
+    border: 2px solid #000;
+    width: 80%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    background-color: #c2b38479;
+}
+
+.membresia img {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    padding: 1rem;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.info p {
+    margin: 0.5rem 0;
+}
+
+.adquirir {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    padding-top: 2rem;
+}
+
+/*Pagina de Promociones*/
+/*Distribucion de secciones*/
+.imgPromociones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/*Distribucion de contenido dentro de la seccion*/
+.promociones {
+    position: relative;
+    border: 2px solid #000;
+    width: 660px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    background-color: #c2b38479;
+}
+
+.titPromos {
+    display: flex;
+    flex-direction: column;
+}
+
+.titPromos h1 {
+    text-transform: uppercase;
+    color: #cdcdcdfd;
+    font-size: 2rem;
+    margin-left: 5rem;
+}
+
+.promociones p {
+    font-size: 2rem;
+    color: #ffffff9b;
+}
+
+.promociones .info {
+    padding: 7rem 2rem 2rem 2rem;
+}
+
+.promociones .adquirir {
+    padding-top: 5rem;
+    color: var(--Dorado);
+}
+
+.promociones .flecha {
+    color: var(--Dorado);
+}
+
+.promociones img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 0 2rem 2rem 2rem;
+}
+
+
+/*Pagina de Ingresar*/
+/* Estilos generales del formulario */
+.formulario {
+    background-color: var(--gris);
+    width: min(40rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px 0px rgba(158, 150, 158, 0.77);
+}
+
+/* Eliminación de bordes para fieldset */
+.formulario fieldset {
+    border: none;
+}
+
+/* Estilos para el titulo(legend) del formulario */
+.formulario legend {
+    text-decoration: underline;
+    color: #232222c3;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-top: 2.5rem;
+    text-align: center;
+}
+
+/* Estilos para campos específicos en pantallas más grandes */
+@media (min-width: 480px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-rows: auto auto 4rem;
+        margin-right: 2rem;
+    }
+}
+
+/* Dar un espacido entre el titulo de arriba con el label */
+.contraseña {
+    padding-top: 3.5rem;
+}
+
+/* Estilos para etiquetas de campos */
+.campos label {
+    text-decoration: underline;
+    color: #0000009d;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para áreas de texto */
+.campos textarea {
+    height: 15rem;
+}
+
+/* Estilos para inputs de texto */
+.input-text {
+    width: 100%;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    z-index: 2;
+}
+
+/* Estilos para botones de envío */
+.InicioSesion {
+    padding-top: 1rem;
+}
+
+/* Ajustar el tamaño y posición de la img de fondo background */
+.imgIngresar {
+    position: relative;
+    overflow: hidden;
+    min-height: 70rem;
+}
+
+.campos {
+    padding: 1rem;
+}
+
+/* Estilos y ajustes a la imagen */
+.imgIngresar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../img/fondoIngresar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Espaciado entre la barra de navegación y el formulario */
+.Ingresar {
+    padding-top: 10rem;
+}
+
+.rContraseña {
+    padding-top: 1rem;
+    text-align: right;
+}
+
+.error-message {
+    text-decoration: none;
+    color: #ff000066;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Nueva clase para el enlace de la contraseña */
+.contraseña-link {
+    color: #3b3b3ba0;
+    display: inline-block;
+    z-index: 1;
+}
+
+
+/*Pagina de Registrarse*/
+/*Ajustar el tamaño y posicion de la img de fondo background*/
+.imgRegistrarse {
+    position: relative;
+    overflow: hidden;
+    min-height: 70rem;
+}
+
+/*Estilos y ajustes a la imagen*/
+.imgRegistrarse::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../img/fondoIngresar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/*Espaciado entre barra y formulario*/
+.Registrarse {
+    padding-top: 8rem;
+}
+
+.msgR {
+    text-transform: uppercase;
+}
+
+/*Estilo para el Boton*/
+.enviar {
+    border: none;
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 10px 0;
+    font-size: 2rem;
+    background-color: var(--AzulTransparente);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*Pequeña animacion para el boton cuando el usuario pase el cursor por encima del boton*/
+.enviar:hover {
+    background-color: var(--AzulMarino);
+}
+
+.boton {
+    color: #2b28285a;
+}
+
+.ccontraseña {
+    padding-top: 6rem;
+}
+
+.cuentaNueva {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.registro {
+    color: #3b3b3ba0;
+    text-decoration: underline;
+    display: block;
+    margin: 5px 0;
+}
+
+/**/
+
+/*Estilos para el titulo principal de las peliculas*/
+.descPelicula2 h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.549);
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
+
+/* Estilos para el formulario */
+.formulario2 {
+    background-color: #d3cfcf97;
+    width: 97rem;
+    /* Establecer un ancho fijo o usar un ancho máximo */
+    height: 53rem;
+    max-width: 100%;
+    /* Limitar el ancho máximo al 100% del contenedor padre */
+    margin: 0 auto;
+    /* Centrar el formulario horizontalmente */
+    padding: 2rem;
+    /* Ajustar el espaciado interno según sea necesario */
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px 0px rgba(158, 150, 158, 0.525);
+}
+
+.formulario2 legend {
+    color: #fff9f9;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Eliminación de bordes para fieldset */
+.formulario2 fieldset {
+    border: none;
+}
+
+/* Estilos para etiquetas de campos */
+.campos2 label {
+    margin: 0;
+    margin-left: 2rem;
+    color: #0000009d;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+
+form#seleccionPelicula {
+    margin-bottom: 20px;
+    /* Espaciado entre el formulario y la selección de asientos */
+}
+
+form#seleccionPelicula label {
+    margin-top: 10px;
+    /* Espaciado superior para las etiquetas */
+}
+
+form#seleccionPelicula select {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* Espaciado interno para los select */
+    margin-top: 5px;
+    /* Espaciado superior para los select */
+    border: 1px solid #ccc;
+    /* Borde de los select */
+    border-radius: 4px;
+    /* Bordes redondeados para los select */
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+}
+
+.Soporte a {
+    display: flex;
+    flex-direction: column;
+    color: #0000009c;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    padding-right: 2rem;
+}
+
+.Soporte p{
+    display: flex;
+    flex-direction: column;
+    color: #0000009c;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.4rem;
+    padding-right: 2rem;
+}
+
+.line1 {
+    margin-top: 2rem;
+}
+
+.boton2 {
+    background-color: #008CBA;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    padding: 10px 20px;
+    /* Espaciado interno del botón */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados del botón */
+    cursor: pointer;
+    /* Cursor en forma de mano al pasar sobre el botón */
+    margin-top: 2rem;
+    margin-left: 7.5rem;
+}
+
+.boton2:hover {
+    background-color: #005f73;
+    /* Color de fondo del botón al pasar el mouse */
+}
+
+/* Añade este estilo al final de tu archivo CSS */
+.direccionAsientos {
+    float: right;
+    /* Esto hace que se alinee a la derecha */
+    margin-top: 1rem;
+    /* Ajusta según sea necesario */
+}
+
+.contenidoAsientos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenidoAsientos label {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+}
+
+.seleccionAsientos {
+    background-color: #eee9e9;
+    width: 60rem;
+    /* Establecer un ancho fijo o usar un ancho máximo */
+    height: 45rem;
+    max-width: 100%;
+    /* Limitar el ancho máximo al 100% del contenedor padre */
+    margin: 0 auto;
+    /* Centrar el formulario horizontalmente */
+    padding: 2rem;
+    /* Ajustar el espaciado interno según sea necesario */
+    border: none;
+    border-radius: 1rem;
+}
+
+.screen {
+    width: 80%;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.seating-chart {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    gap: 10px;
+}
+
+.seat {
+    width: 50px;
+    height: 50px;
+    background-color: #75aa77;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background-color: #b0b0b0;
+    color: black;
+}
+
+/*Posicion del diseño del boton*/
+
+
+.boTrailer {
+    position: absolute;
+    bottom: 2.6%;
+    left: 45rem;
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: var(--AzulTransparente);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Estilos para la ventana emergente */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* fondo semitransparente */
+    overflow: auto;
+}
+
+.modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe9c;
+    padding: 5px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    animation-name: animatetop;
+    animation-duration: 1s;
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*CARRITO*/
+.conCarrito {
+    background-color: #1c2d39;
+    border-radius: 10px;
+    margin: 20px;
+    height: auto;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgb(21, 21, 21);
+}
+
+.conCarrito .titulo {
+    padding-top: 1px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.conCarrito2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 360px;
+    height: auto;
+    margin: 20px;
+}
+
+.conCarrito2 h2{
+    border: 2px solid #000;
+    margin-top: -21px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+    width: 360px;
+    height: auto;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.conCarrito2 img{
+    border-bottom: 2px solid #000;
+    padding: 0 27px 10px 27px;
+    margin-top: -10px;
+    width: 350px;
+}

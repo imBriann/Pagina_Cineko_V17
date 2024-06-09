@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+    <title>CineKo</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Staatliches&display=swap"
+        rel="stylesheet" />
+    <link rel="preload" href="/static/css/normalize.css" as="style" />
+    <link href="/static/css/normalize.css" rel="stylesheet" />
+    <link rel="preload" href="/static/css/style.css" as="style" />
+    <link rel="icon" href="/static/img/logo2.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/img/logo2.png" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="nav-bg">
+        <a href="/templates/index.html">CINEKO</a>
+        <a href="/templates/cartelera.html">CARTELERA</a>
+        <a href="/templates/comidas.html">CONFITERIA</a>
+        <a href="/templates/membresias.html">MEMBRESIAS</a>
+        <a href="/templates/promociones.html">PROMOCIONES</a>
+        <a href="/templates/ingresar.html"><svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-user-filled" width="20" height="20" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="#c2b284" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" stroke-width="0"
+                    fill="currentColor" />
+                <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z"
+                    stroke-width="0" fill="currentColor" />
+            </svg>
+            INGRESAR</a>
+    </nav>
+</body>
+
+<div class="poster-pelicula">
+    <div class="conPelicula">
+        <img src="/static/img/Cartelera/Poster_laBallena.jpg" alt="Dune">
+        <div class="descPelicula">
+            <h1>La Ballena</h1>
+            <p>La Ballena (The Whale) es una película de drama estadounidense de 2022, dirigida por Darren Aronofsky.
+                La trama sigue a Charlie, un solitario profesor de inglés con obesidad severa, que intenta reconectar
+                con su hija adolescente en una última oportunidad de redención. Charlie es un maestro que sufre de
+                depresión por las desgracias que atraviesa a lo largo de su vida. La película fue aclamada y recibió
+                tres nominaciones a los Premios Oscar, incluyendo Mejor Actor Principal (Brendan Fraser) y Mejor Actriz
+                Secundaria (Hong Chau).</p>
+
+            <h2>Reparto y Personajes</h2>
+            <p>La película cuenta con un elenco destacado que incluye a Brendan Fraser como Charlie, un profesor de
+                inglés solitario y con obesidad severa435Sadie Sink interpreta a Ellie, la hija adolescente de
+                Charlie, y Jacey Sink interpreta a la joven Ellie5Hong Chau interpreta a Liz, una enfermera que es la
+                única amiga de Charlie Ty Simpkins interpreta a Thomas, un misionero cristiano, y Samantha Morton
+                interpreta a Mary, la exesposa de Charlie y la madre de Ellie.</p>
+            <div class="trailerContainer">
+                <button class="boTrailer"
+                    onclick="openTrailer('https://www.youtube.com/embed/WVQ2hbXAyZw?autoplay=1')">Ver Trailer</button>
+
+            </div>
+
+            <!-- Ventana emergente del video -->
+            <div class="modal" id="videoModal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <iframe id="videoPlayer" width="800" height="450" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bContinuar">
+            <a class="boContinuar" href="../Proceso-Compra.html?id=40916">Continuar</a>
+        </div>
+    </div>
+</div>
+<script src="/static/js/trailer.js"></script>
+</body>
+<footer class="footer">
+    <p>Copyright © 2024 CineKo Real. All Rights Reserved</p>
+</footer>

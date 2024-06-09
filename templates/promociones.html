@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+  <title>CineKo</title>
+  <link rel="stylesheet" href="../static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Staatliches&display=swap"
+    rel="stylesheet" />
+  <link rel="preload" href="../static/css/normalize.css" as="style" />
+  <link href="../static/css/normalize.css" rel="stylesheet" />
+  <link rel="preload" href="../static/css/style.css" as="style" />
+  <link rel="icon" href="../static/img/logo2.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="../static/img/logo2.png" type="image/x-icon" />
+</head>
+
+<body>
+  <nav class="nav-bg">
+    <a href="http://127.0.0.1:5500/templates/index.html">CINEKO</a>
+    <a href="http://127.0.0.1:5500/templates/cartelera.html">CARTELERA</a>
+    <a href="http://127.0.0.1:5500/templates/comidas.html">CONFITERIA</a>
+    <a href="http://127.0.0.1:5500/templates/membresias.html">MEMBRESIAS</a>
+    <a class="selMenu" href="http://127.0.0.1:5500/templates/promociones.html">PROMOCIONES</a>
+    <a href="http://127.0.0.1:5500/templates/ingresar.html"><svg xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-user-filled" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="#c2b284" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" stroke-width="0" fill="currentColor" />
+        <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" stroke-width="0"
+          fill="currentColor" />
+      </svg>
+      INGRESAR</a>
+  </nav>
+</body>
+
+<main>
+  <div class="imgPromociones">
+    <div class="promociones" data-nombre="promo1" onclick="comprarPromocion(this)">
+      <div class="titPromos">
+        <h1>Promo 1</h1>
+        <img src="/static/img/Confiteria/combo1.png" alt="Combo 1">
+      </div>
+      <div class="info">
+
+        <p>• Membresia Gold: $49.900</p>
+        <p>• Membresia Plus: $55.900</p>
+        <p>• Sin Membresia: $62.900</p>
+        <a href="#" onclick="comprarPromocion(this)">
+          <p class="adquirir">Comprar</p>
+          <p class="flecha">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-down-filled"
+              width="24" height="24" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                stroke-width="0" fill="currentColor"></path>
+            </svg>
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="promociones" data-nombre="promo2" onclick="comprarPromocion(this)">
+      <div class="titPromos">
+        <h1>Promo 2</h1>
+        <img src="/static/img/Confiteria/combo3.png" alt="Combo 3">
+      </div>
+      <div class="info">
+
+        <p>• Membresia Gold: $19.900</p>
+        <p>• Membresia Plus: $25.900</p>
+        <p>• Sin Membresia: $29.900</p>
+        <a href="#" onclick="comprarPromocion(this)">
+          <p class="adquirir">Comprar</p>
+          <p class="flecha">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-down-filled"
+              width="24" height="24" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                stroke-width="0" fill="currentColor"></path>
+            </svg>
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="promociones" data-nombre="promo3" onclick="comprarPromocion(this)">
+      <div class="titPromos">
+        <h1>Promo 3</h1>
+        <img src="/static/img/Confiteria/combo5.png" alt="Combo 5">
+      </div>
+      <div class="info">
+
+        <p>• Membresia Gold: $29.900</p>
+        <p>• Membresia Plus: $35.900</p>
+        <p>• Sin Membresia: $39.900</p>
+        <a href="#" onclick="comprarPromocion(this)">
+          <p class="adquirir">Comprar</p>
+          <p class="flecha">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-down-filled"
+              width="24" height="24" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                stroke-width="0" fill="currentColor"></path>
+            </svg>
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="promociones" data-nombre="promo4" onclick="comprarPromocion(this)">
+      <div class="titPromos">
+        <h1>Promo 4</h1>
+        <img src="/static/img/Confiteria/combo7.png" alt="Combo 7">
+      </div>
+      <div class="info">
+
+        <p>• Membresia Gold: $6.900</p>
+        <p>• Membresia Plus: $8.900</p>
+        <p>• Sin Membresia: $10.900</p>
+        <a href="#" onclick="comprarPromocion(this)">
+          <p class="adquirir">Comprar</p>
+          <p class="flecha">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-down-filled"
+              width="24" height="24" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9f9dd7" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M16.375 6.22l-4.375 3.498l-4.375 -3.5a1 1 0 0 0 -1.625 .782v6a1 1 0 0 0 .375 .78l5 4a1 1 0 0 0 1.25 0l5 -4a1 1 0 0 0 .375 -.78v-6a1 1 0 0 0 -1.625 -.78z"
+                stroke-width="0" fill="currentColor"></path>
+            </svg>
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/static/js/carrito.js"></script>
+
+<footer class="footer">
+  <p>Copyright © 2024 CineKo Real. All Rights Reserved</p>
+</footer>
+
+</html>

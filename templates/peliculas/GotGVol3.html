@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+    <title>CineKo</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Staatliches&display=swap"
+        rel="stylesheet" />
+    <link rel="preload" href="/static/css/normalize.css" as="style" />
+    <link href="/static/css/normalize.css" rel="stylesheet" />
+    <link rel="preload" href="/static/css/style.css" as="style" />
+    <link rel="icon" href="/static/img/logo2.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/img/logo2.png" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="nav-bg">
+        <a href="/templates/index.html">CINEKO</a>
+        <a href="/templates/cartelera.html">CARTELERA</a>
+        <a href="/templates/comidas.html">CONFITERIA</a>
+        <a href="/templates/membresias.html">MEMBRESIAS</a>
+        <a href="/templates/promociones.html">PROMOCIONES</a>
+        <a href="/templates/ingresar.html"><svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-user-filled" width="20" height="20" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="#c2b284" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" stroke-width="0"
+                    fill="currentColor" />
+                <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z"
+                    stroke-width="0" fill="currentColor" />
+            </svg>
+            INGRESAR</a>
+    </nav>
+</body>
+
+<div class="poster-pelicula">
+    <div class="conPelicula">
+        <img src="/static/img/Cartelera/Poster_guardianesdelaGalaxiaVol3.jpg" alt="Dune">
+        <div class="descPelicula">
+            <h1>Guardianes de la Galaxia Vol. 3</h1>
+            <p>Guardianes de la Galaxia Vol. 3 es una película de superhéroes estadounidense de 2023, dirigida por James
+                Gunn. Es la secuela de Guardianes de la Galaxia (2014) y Guardianes de la Galaxia Vol. 2 (2017), y la
+                32ª película en el Universo Cinematográfico de Marvel (MCU). En la película, los otros Guardianes corren
+                para salvar la vida de Rocket (Cooper) de su creador, el Alto Evolucionario (Iwuji), quien es un
+                científico alienígena que intenta perfeccionar el universo. La película explora la historia de origen de
+                Rocket, con quien Gunn se identifica personalmente.</p>
+
+            <h2>Reparto y Personajes</h2>
+            <p>La película cuenta con un elenco estelar que incluye a Chris Pratt como Peter Quill / Star-Lord, Zoe
+                Saldaña como Gamora, Dave Bautista como Drax el Destructor, Vin Diesel como Groot (voz), Bradley Cooper
+                como Rocket (voz), Karen Gillan como Nebula, Pom Klementieff como Mantis, Elizabeth Debicki como Ayesha,
+                Will Poulter como Adam Warlock, Sean Gunn como Kraglin, Chukwudi Iwuji como el Alto Evolucionario, Maria
+                Bakalova como Cosmo el Perro Espacial, y Sylvester Stallone como Stakar Ogord. La película también
+                presenta a Linda Cardellini como Lylla la Nutria, Asim Chaudhry como Teefs, Mikaela Hoover como Floor,
+                Nathan Fillion como Maestro Karja, Jennifer Holland como Administradora Kwol, Daniela Melchior como Ura,
+                Michael Rosenbaum como Martinex, Judy Greer como War Pig, Howard the Duck con la voz de Seth Green, y
+                Michael Rooker como Yondu.</p>
+            <div class="trailerContainer">
+                <button class="boTrailer"
+                    onclick="openTrailer('https://www.youtube.com/embed/sinstLBy9l8?autoplay=1')">Ver Trailer</button>
+
+            </div>
+
+            <!-- Ventana emergente del video -->
+            <div class="modal" id="videoModal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <iframe id="videoPlayer" width="800" height="450" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bContinuar">
+            <a class="boContinuar" href="../Proceso-Compra.html?id=100380">Continuar</a>
+        </div>
+    </div>
+</div>
+<script src="/static/js/trailer.js"></script>
+</body>
+<footer class="footer">
+    <p>Copyright © 2024 CineKo Real. All Rights Reserved</p>
+</footer>

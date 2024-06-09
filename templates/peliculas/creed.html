@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+    <title>CineKo</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Staatliches&display=swap"
+        rel="stylesheet" />
+    <link rel="preload" href="/static/css/normalize.css" as="style" />
+    <link href="/static/css/normalize.css" rel="stylesheet" />
+    <link rel="preload" href="/static/css/style.css" as="style" />
+    <link rel="icon" href="/static/img/logo2.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/img/logo2.png" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="nav-bg">
+        <a href="/templates/index.html">CINEKO</a>
+        <a href="/templates/cartelera.html">CARTELERA</a>
+        <a href="/templates/comidas.html">CONFITERIA</a>
+        <a href="/templates/membresias.html">MEMBRESIAS</a>
+        <a href="/templates/promociones.html">PROMOCIONES</a>
+        <a href="/templates/ingresar.html"><svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-user-filled" width="20" height="20" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="#c2b284" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" stroke-width="0"
+                    fill="currentColor" />
+                <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z"
+                    stroke-width="0" fill="currentColor" />
+            </svg>
+            INGRESAR</a>
+    </nav>
+</body>
+
+<div class="poster-pelicula">
+    <div class="conPelicula">
+        <img src="/static/img/Cartelera/Poster_Creed3.jpg" alt="Dune">
+        <div class="descPelicula">
+            <h1>Creed III</h1>
+            <p>Creed III es una película de drama deportivo estadounidense de 2023, dirigida por Michael B. Jordan en su
+                debut como director. Es la secuela de Creed II (2018) y la novena entrega de la franquicia de Rocky. La
+                película sigue a Adonis Creed, interpretado por Michael B. Jordan, quien ha estado prosperando tanto en
+                su carrera como en su vida familiar. Sin embargo, cuando un amigo de la infancia y antiguo prodigio del
+                boxeo, Damian Anderson, interpretado por Jonathan Majors, reaparece después de cumplir una larga condena
+                en prisión, el enfrentamiento es más que solo una pelea.</p>
+
+            <h2>Reparto y Personajes</h2>
+            <p>“Creed III” es una película que marca el debut en la dirección de Michael B. Jordan, quien también
+                protagoniza el papel de Adonis ‘Donnie’ Creed, un boxeador que ha tenido éxito tanto en su carrera como
+                en su vida familiar. En esta entrega, Adonis se enfrenta a Damian ‘Dame’ Anderson, interpretado por
+                Jonathan Majors, un viejo amigo y antiguo prodigio del boxeo que busca redención tras salir de prisión.
+                Tessa Thompson regresa como Bianca Taylor, la esposa de Adonis y una talentosa cantante convertida en
+                productora. La pequeña Amara Creed, hija de Adonis y Bianca, es interpretada por Mila Davis-Kent. Aunque
+                Sylvester Stallone no aparece en esta película, cuenta con la participación especial de Saúl “Canelo”
+                Álvarez.</p>
+            <div class="trailerContainer">
+                <button class="boTrailer"
+                    onclick="openTrailer('https://www.youtube.com/embed/TZodLL5YEtE?autoplay=1')">Ver Trailer</button>
+
+            </div>
+
+            <!-- Ventana emergente del video -->
+            <div class="modal" id="videoModal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <iframe id="videoPlayer" width="800" height="450" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bContinuar">
+            <a class="boContinuar" href="../Proceso-Compra.html?id=90156">Continuar</a>
+        </div>
+    </div>
+</div>
+<script src="/static/js/trailer.js"></script>
+</body>
+<footer class="footer">
+    <p>Copyright © 2024 CineKo Real. All Rights Reserved</p>
+</footer>
