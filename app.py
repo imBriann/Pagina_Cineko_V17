@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify, session
+import os
 import sqlite3
 from flask_cors import CORS
 import sqlite3
@@ -19,9 +20,14 @@ smtp_password = "ksrsqcqwsjccixnc"
 
 
 CORS(app)
+
+
+def get_database_path():
+    return os.environ.get("DATABASE_PATH", "/tmp/database.db" if os.environ.get("VERCEL") else "database.db")
+
 # Configuración de la base de datos
 def init_sqlite_db():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect(get_database_path())
     print("Base de datos abierta exitosamente")
     
     conn.execute('CREATE TABLE IF NOT EXISTS usuarios (nombre TEXT, apellido TEXT, correo TEXT, contrasena TEXT)')
@@ -45,7 +51,7 @@ def register():
 
             contrasena_encriptada = sha256(contrasena.encode()).hexdigest()
 
-            with sqlite3.connect('database.db') as con:
+            with sqlite3.connect(get_database_path()) as con:
                 cur = con.cursor()
 
                 # Verificar si el correo ya está registrado
@@ -285,7 +291,7 @@ def continue_register():
         contrasena = request.form['contrasena']
         contrasena_encriptada = sha256(contrasena.encode()).hexdigest()
 
-        with sqlite3.connect('database.db') as con:
+        with sqlite3.connect(get_database_path()) as con:
             cur = con.cursor()
             # Actualizar el registro con la nueva información
             cur.execute("INSERT INTO usuarios (nombre, apellido, correo, contrasena) VALUES (?, ?, ?, ?)", 
@@ -309,7 +315,7 @@ def login():
         contrasena_encriptada = sha256(contrasena.encode()).hexdigest()
 
         try:
-            with sqlite3.connect('database.db') as con:
+            with sqlite3.connect(get_database_path()) as con:
                 cur = con.cursor()
                 cur.execute("SELECT * FROM usuarios WHERE correo = ? AND contrasena = ?", (correo, contrasena_encriptada))
                 user = cur.fetchone()
