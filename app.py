@@ -40,6 +40,11 @@ init_sqlite_db()
 def home():
     return render_template('index.html')
 
+
+@app.route('/templates/<path:template_name>')
+def render_template_page(template_name):
+    return render_template(template_name)
+
 @app.route('/register', methods=['POST'])
 def register():
     if request.method == 'POST':
@@ -70,6 +75,10 @@ def register():
                 remitente = "cinekoreal@outlook.com"
                 destinatario = correo
                 asunto = "Gracias por registrarte"
+                dune_url = url_for('render_template_page', template_name='peliculas/dune.html', _external=True)
+                endgame_url = url_for('render_template_page', template_name='peliculas/endGame.html', _external=True)
+                interstellar_url = url_for('render_template_page', template_name='peliculas/interstellar.html', _external=True)
+                laballena_url = url_for('render_template_page', template_name='peliculas/laballena.html', _external=True)
                 
 
                 # Ruta de la imagen que deseas incrustar (reemplaza con la ruta correcta)
@@ -205,13 +214,13 @@ def register():
                             <table class="image-container">
                                 <tr>
                                     <td>
-                                        <a href="http://127.0.0.1:5500/templates/peliculas/dune.html" target="_blank">
+                                        <a href="{dune_url}" target="_blank">
                                             <img src="cid:poster1" alt="Dune">
                                             <p class="titulo-pelicula">Dune</p>
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="http://127.0.0.1:5500/templates/peliculas/endGame.html" target="_blank">
+                                        <a href="{endgame_url}" target="_blank">
                                             <img src="cid:poster2" alt="endGame">
                                             <p class="titulo-pelicula">Avengers: Endgame</p>
                                         </a>
@@ -219,13 +228,13 @@ def register():
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="http://127.0.0.1:5500/templates/peliculas/interstellar.html" target="_blank">
+                                        <a href="{interstellar_url}" target="_blank">
                                             <img src="cid:poster3" alt="Interstellar">
                                             <p class="titulo-pelicula">Interstellar</p>
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="http://127.0.0.1:5500/templates/peliculas/laballena.html" target="_blank">
+                                        <a href="{laballena_url}" target="_blank">
                                             <img src="cid:poster4" alt="laBallena">
                                             <p class="titulo-pelicula">La Ballena</p>
                                         </a>
